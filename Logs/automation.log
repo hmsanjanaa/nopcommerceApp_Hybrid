@@ -1,8 +1,17 @@
-08/22/2023 03:38:04 PM - INFO - ************* Test_003_AddCustomer **********
-08/22/2023 03:38:17 PM - INFO - ************* Login successful **********
-08/22/2023 03:38:17 PM - INFO - ******* Starting Add Customer Test **********
-08/22/2023 03:38:30 PM - INFO - ************* Providing customer info **********
-08/22/2023 03:38:42 PM - INFO - ************* Saving customer info **********
-08/22/2023 03:38:42 PM - INFO - ********* Add customer validation started *****************
-08/22/2023 03:38:42 PM - INFO - ********* Add customer Test Passed *********
-08/22/2023 03:38:42 PM - INFO - ******* Ending Add customer test **********
+08/27/2023 12:07:23 PM - INFO - ********************** Test_001_Login *********************************
+08/27/2023 12:07:23 PM - INFO - ********************* Verifying Login Title ************************
+08/27/2023 12:07:41 PM - INFO - ********************* LoginPage Title test PASSED ************************
+08/27/2023 12:06:48 PM - INFO - ********** Email entered **********
+08/27/2023 12:06:48 PM - INFO - ********** Password entered **********
+08/27/2023 12:06:48 PM - INFO - ********** FirstName entered **********
+08/27/2023 12:06:48 PM - INFO - ********** Last Name entered **********
+08/27/2023 12:06:48 PM - INFO - ********** Gender Selected **********
+08/27/2023 12:06:48 PM - INFO - ********** DOB entered **********
+08/27/2023 12:06:48 PM - INFO - ********** Company entered **********
+08/27/2023 12:06:56 PM - INFO - ********** Customer roles selected **********
+08/27/2023 12:06:56 PM - INFO - ********** Vendors selected **********
+08/27/2023 12:06:56 PM - INFO - ********** Comments entered **********
+08/27/2023 12:07:06 PM - INFO - ********** Clicked on save **********
+08/27/2023 12:07:06 PM - INFO - ********** Saving Customer Info **********
+08/27/2023 12:07:11 PM - INFO - ********** Add Customer Test Passed **********
+08/27/2023 12:07:13 PM - INFO - ********** Ending Add Customer Test **********

@@ -34,61 +34,58 @@ class Test_003_AddCustomer:
         self.addcust = AddCustomer(self.driver)
         time.sleep(2)
         self.addcust.clickOnCustomersMenu()
-
         self.addcust.clickOnCustomersMenuItem()
-
         self.addcust.clickOnAddnew()
-
         self.logger.info("************* Providing customer info **********")
-        # result = ''.join((random.choice(string.ascii_lowercase + string.digits) for x in range(8)))
+
+# def random_generator(size=8, chars=string.ascii_lowercase + string.digits):
+#     return ''.join(random.choice(chars) for x in range(size))
+        # user_defined random_generator function below:
         self.email = random_generator() + "@gmail.com"
+        # print(self.email)
         self.addcust.setEmail(self.email)
-        self.addcust.setPassword("test123")
-        self.addcust.setCustomerRoles("Guests")
-        self.addcust.setManagerOfVendor("Vendor 2")
-        self.addcust.setGender("Female")
-        self.addcust.setFirstName("Sanjanaa")
-        self.addcust.setLastName("H")
-        self.addcust.setDob("01/05/1993")  # Format: D / MM / YYY
-        self.addcust.setCompanyName("QA")
-        self.addcust.setAdminContent("This is for testing.........")
+        self.logger.info("********** Email entered **********")
+        self.addcust.setPassword('text123')
+        self.logger.info("********** Password entered **********")
+        self.addcust.setFirstName('ShowOff')
+        self.logger.info("********** FirstName entered **********")
+        self.addcust.setLastName('Automation')
+        self.logger.info("********** Last Name entered **********")
+        self.addcust.setGender('Female')
+        self.logger.info("********** Gender Selected **********")
+        self.addcust.setDob('06/17/1994')
+        self.logger.info("********** DOB entered **********")
+        self.addcust.setCompanyName('SomeCompany')
+        self.logger.info("********** Company entered **********")
+        self.addcust.setCustomerRoles('Guests')
+        self.logger.info("********** Customer roles selected **********")
+        self.addcust.setManagerOfVendor('Vendor 1')
+        self.logger.info("********** Vendors selected **********")
+
+        self.addcust.setAdminContent('Adding Comments')
+        self.logger.info("********** Comments entered **********")
         self.addcust.clickOnSave()
-        # self.actAddCustomer.setEmailToCustomer(result + ".gmail.com")
-        # self.actAddCustomer.setPasswordToCustomer("1234")
-        # self.actAddCustomer.setFirstNameToCustomer("Avi")
-        # self.actAddCustomer.setLastNameToCustomer("Band")
-        # self.actAddCustomer.clickgenderMaleRadioButton()
-        # self.actAddCustomer.setDateofbarth("4/6/2023")
-        # self.actAddCustomer.setCompanyName("student")
-        # self.actAddCustomer.clickIsTaxExemptChechedBox()
-        # self.actAddCustomer.clickNewsletterClickEmpty()
-        # self.actAddCustomer.clicknewseletterYourstorename()
-        # self.actAddCustomer.clickCustomerrolesClickEmpty()
-        # self.actAddCustomer.clickCustomerrolesAdministrators()
-        # # self.actAddCustomer.selectManagerofvendor("Vendor 1")
-        # self.actAddCustomer.setAdmincomment("It's Google.")
-        # self.actAddCustomer.clicksaveButtonButton()
-        # flag = self.actAddCustomer.VerifyAddCustomerSuccessfullymassage()
-        # print("##################################   "+flag)
+        time.sleep(5)
+        self.logger.info("********** Clicked on save **********")
 
-        self.logger.info("************* Saving customer info **********")
-
-        self.logger.info("********* Add customer validation started *****************")
-
+        self.logger.info("********** Saving Customer Info **********")
+        #self.msg = self.driver.find_element(By.CLASS_NAME, "alert alert-success alert-dismissable")
         self.msg = self.driver.find_element(By.TAG_NAME, "body").text
-
-        print(self.msg)
-        if 'customer has been added successfully.' in self.msg:
-            assert True
-            self.logger.info("********* Add customer Test Passed *********")
+       # print(self.msg)
+        time.sleep(5)
+        if "The new customer has been added successfully." in self.msg:
+            assert True == True
+            self.logger.info("********** Add Customer Test Passed **********")
         else:
-            self.driver.save_screenshot(".\\Screenshots\\" + "test_addCustomer_scr.png")  # Screenshot
-            self.logger.error("********* Add customer Test Failed ************")
-            assert False
+            self.driver.save_screenshot("./Screenshots/add_Customer_Scr.png")
+            self.logger.info("********** Add Customer Test Failed **********")
+            assert True == False
 
         self.driver.close()
-        self.logger.info("******* Ending Add customer test **********")
+        self.logger.info("********** Ending Add Customer Test **********")
 
-
-def random_generator(size=8, chars=string.ascii_lowercase + string.digits):
-    return ''.join(random.choice(chars) for x in range(size))
+def random_generator(size=8,
+                         chars=string.ascii_lowercase + string.digits):  # generates 8 characters with letters and digits
+        x = ''.join(random.choice(chars) for x in range(size))  # everytiome new character string
+        print(x)
+        return x
